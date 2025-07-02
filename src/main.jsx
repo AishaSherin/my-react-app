@@ -42,6 +42,16 @@ function Mainbox(props) {
   )
 }
 
+function Footer(){
+  return(
+    <>
+     <footer className="text-center mt-12 py-6 border-t border-gray-200 text-gray-500 text-sm">
+        <p>&copy; 2025 Component Labs. All rights reserved.</p>
+    </footer>
+    </>
+  )
+}
+
 const header = React.createElement('header', { className: 'text-center mb-12' }, React.createElement(HelloHeading));
 
 const div = React.createElement('div', { className: "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto" }, React.createElement(Mainbox, {
@@ -132,12 +142,13 @@ const div = React.createElement('div', { className: "grid grid-cols-1 md:grid-co
     svg5: 'M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279L12 18.896l-7.416 3.882 1.48-8.279-6.064-5.828 8.332-1.151z',
   }),
 )
-
+ const footer = React.createElement('header',null,React.createElement(Footer));
+ 
 
 const container = React.createElement(
   'div',
   { className: 'p-6 space-y-4' },
-  [header, div]
+  [header, div, footer]
 );
 const root = createRoot(document.getElementById('root'))
 root.render(container);
