@@ -42,33 +42,37 @@ function Mainbox(props) {
   )
 }
 
-function Footer(){
-  return(
+function Footer() {
+  return (
     <>
-     <footer className="text-center mt-12 py-6 border-t border-gray-200 text-gray-500 text-sm">
+      <footer className="text-center mt-12 py-6 border-t border-gray-200 text-gray-500 text-sm">
         <p>&copy; 2025 Component Labs. All rights reserved.</p>
-    </footer>
+      </footer>
     </>
   )
 }
 
-const header = React.createElement('header', { className: 'text-center mb-12' }, React.createElement(HelloHeading));
+const header = (
+  <header className="text-center mb-12">
+    <HelloHeading />
+  </header>
+);
 
-const div = React.createElement('div', { className: "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto" }, React.createElement(Mainbox, {
-  heading: 'Stylish Noise-Cancelling Headphones',
-  paragraph: 'Immerse yourself in pure audio bliss with our premium noise-cancelling headphones. Perfect for travel or focused work',
-  disAmount: "$149.99",
-  Amount: "$199.99",
-  reveiw: '(128 Reviews)',
-  cart: 'Add to Cart',
-  svg1: 'M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279L12 18.896l-7.416 3.882 1.48-8.279-6.064-5.828 8.332-1.151z',
-  svg2: 'M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279L12 18.896l-7.416 3.882 1.48-8.279-6.064-5.828 8.332-1.151z',
-  svg3: 'M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279L12 18.896l-7.416 3.882 1.48-8.279-6.064-5.828 8.332-1.151z',
-  svg4: 'M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279L12 18.896l-7.416 3.882 1.48-8.279-6.064-5.828 8.332-1.151z',
-  svg5: 'M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279L12 18.896l-7.416 3.882 1.48-8.279-6.064-5.828 8.332-1.151z',
-}),
+const Boxes = [
+  {
+    heading: 'Stylish Noise-Cancelling Headphones',
+    paragraph: 'Immerse yourself in pure audio bliss with our premium noise-cancelling headphones. Perfect for travel or focused work',
+    disAmount: "$149.99",
+    Amount: "$199.99",
+    reveiw: '(128 Reviews)',
+    cart: 'Add to Cart',
+    svg1: 'M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279L12 18.896l-7.416 3.882 1.48-8.279-6.064-5.828 8.332-1.151z',
+    svg3: 'M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279L12 18.896l-7.416 3.882 1.48-8.279-6.064-5.828 8.332-1.151z',
+    svg4: 'M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279L12 18.896l-7.416 3.882 1.48-8.279-6.064-5.828 8.332-1.151z',
+    svg5: 'M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279L12 18.896l-7.416 3.882 1.48-8.279-6.064-5.828 8.332-1.151z',
+  },
 
-  React.createElement(Mainbox, {
+  {
     heading: 'Advanced Fitness Smartwatch',
     paragraph: 'Track your health and stay connected with our feature-packed smartwatch. Waterproof and long-lasting battery',
     disAmount: "$99.00",
@@ -78,12 +82,9 @@ const div = React.createElement('div', { className: "grid grid-cols-1 md:grid-co
     svg1: 'M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279L12 18.896l-7.416 3.882 1.48-8.279-6.064-5.828 8.332-1.151z',
     svg2: 'M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279L12 18.896l-7.416 3.882 1.48-8.279-6.064-5.828 8.332-1.151z',
     svg3: 'M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279L12 18.896l-7.416 3.882 1.48-8.279-6.064-5.828 8.332-1.151z',
-    svg4: 'M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279L12 18.896l-7.416 3.882 1.48-8.279-6.064-5.828 8.332-1.151z',
     svg5: 'M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279L12 18.896l-7.416 3.882 1.48-8.279-6.064-5.828 8.332-1.151z',
-
-  }),
-
-  React.createElement(Mainbox, {
+  },
+  {
     heading: 'Mechanical RGB Gaming Keyboard',
     paragraph: 'Experience lightning-fast responsiveness with our customizable RGB gaming keyboard. Built for champions',
     disAmount: '$75.50',
@@ -96,9 +97,9 @@ const div = React.createElement('div', { className: "grid grid-cols-1 md:grid-co
     svg4: 'M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279L12 18.896l-7.416 3.882 1.48-8.279-6.064-5.828 8.332-1.151z',
     svg5: 'M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279L12 18.896l-7.416 3.882 1.48-8.279-6.064-5.828 8.332-1.151z',
 
-  }),
+  },
 
-  React.createElement(Mainbox, {
+  {
     heading: 'Ergonomic Wireless Mouse',
     paragraph: 'Work comfortably for hours with our precision ergonomic mouse. Say goodbye to wrist strain.',
     disAmount: "$99.00",
@@ -110,10 +111,10 @@ const div = React.createElement('div', { className: "grid grid-cols-1 md:grid-co
     svg3: 'M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279L12 18.896l-7.416 3.882 1.48-8.279-6.064-5.828 8.332-1.151z',
     svg4: 'M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279L12 18.896l-7.416 3.882 1.48-8.279-6.064-5.828 8.332-1.151z',
     svg5: 'M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279L12 18.896l-7.416 3.882 1.48-8.279-6.064-5.828 8.332-1.151z',
-  }),
+  },
 
 
-  React.createElement(Mainbox, {
+  {
     heading: 'Compact Portable Bluetooth Speaker',
     paragraph: 'Enjoy your music anywhere with this powerful and portable Bluetooth speaker. Great bass and battery life.',
     disAmount: "$98.00",
@@ -124,26 +125,46 @@ const div = React.createElement('div', { className: "grid grid-cols-1 md:grid-co
     svg2: 'M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279L12 18.896l-7.416 3.882 1.48-8.279-6.064-5.828 8.332-1.151z',
     svg3: 'M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279L12 18.896l-7.416 3.882 1.48-8.279-6.064-5.828 8.332-1.151z',
     svg4: 'M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279L12 18.896l-7.416 3.882 1.48-8.279-6.064-5.828 8.332-1.151z',
-    svg5: 'M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279L12 18.896l-7.416 3.882 1.48-8.279-6.064-5.828 8.332-1.151z',
-  }),
+  },
 
-
-  React.createElement(Mainbox, {
+  {
     heading: 'Universal Smart Home Hub',
     paragraph: 'Control all your smart devices from one central hub. Simplify your home automation',
     disAmount: "$99.00",
-    Amount: "$120.00",
+    Amouny: "$120.00",
     reveiw: '(25 Reviews)',
     cart: 'Add to Cart',
     svg1: 'M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279L12 18.896l-7.416 3.882 1.48-8.279-6.064-5.828 8.332-1.151z',
-    svg2: 'M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279L12 18.896l-7.416 3.882 1.48-8.279-6.064-5.828 8.332-1.151z',
+    svg2: 'M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279L12 18.896l-7.416 3.882 1.48-8.279-6.064-5.828 8.332-1.151',
     svg3: 'M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279L12 18.896l-7.416 3.882 1.48-8.279-6.064-5.828 8.332-1.151z',
     svg4: 'M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279L12 18.896l-7.416 3.882 1.48-8.279-6.064-5.828 8.332-1.151z',
     svg5: 'M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279L12 18.896l-7.416 3.882 1.48-8.279-6.064-5.828 8.332-1.151z',
-  }),
-)
- const footer = React.createElement('header',null,React.createElement(Footer));
- 
+  }
+]
+
+const footer = <Footer />;
+
+
+const div = (
+  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+    {Boxes.map((product) => (
+      <Mainbox
+
+        heading={product.heading}
+        paragraph={product.paragraph}
+        disAmount={product.disAmount}
+        Amount={product.Amount}
+        reveiw={product.reveiw}
+        cart={product.cart}
+        svg1={product.svg1}
+        svg2={product.svg2}
+        svg3={product.svg3}
+        svg4={product.svg4}
+        svg5={product.svg5}
+      />
+    ))}
+  </div>
+);
 
 const container = React.createElement(
   'div',
