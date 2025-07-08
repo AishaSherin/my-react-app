@@ -1,7 +1,18 @@
+import React from "react";
+
+
 function Mainbox(props) {
+
+  
+    function onbtnClick() {
+      
+     props.onBtnclick(props.id)
+ 
+    }
+
   return (
     <>
-      <div className="bg-white rounded-lg shadow-lg overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-xl">
+      <div className="bg-white rounded-lg shadow-lg overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-xl ">
 
         <div className="p-6">
           <h2 className="text-2xl font-semibold text-gray-800 mb-2">{props.heading}</h2>
@@ -18,11 +29,16 @@ function Mainbox(props) {
             <svg className="w-5 h-5 text-gray-300 fill-current" viewBox="0 0 24 24"><path d={props.svg5} /></svg>
             <span className="ml-2 text-gray-600 text-sm">{props.reveiw}</span>
           </div>
-          <button className="w-full bg-indigo-600 text-white py-3 px-6 rounded-md text-lg font-medium hover:bg-indigo-700 transition duration-300 shadow-md">{props.cart}</button>
+          <button className="w-full bg-indigo-600 text-white py-3 px-6 rounded-md text-lg font-medium hover:bg-indigo-700 transition duration-300 shadow-md" onClick={onbtnClick}>{props.cartMessage}</button>
+
         </div>
       </div>
+
+
+
     </>
   )
 }
+
 
 export default Mainbox;

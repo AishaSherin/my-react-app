@@ -4,17 +4,11 @@ import App from './App.jsx'
 import './index.css'
 
 
+
 import HelloHeading from './heading.jsx'
 import Mainbox from './Mainbox.jsx'
 import Footer from './Footer.jsx'
-
-
-
-const header = (
-  <header className="text-center mb-12">
-    <HelloHeading />
-  </header>
-);
+import Cartlist from './Cartlist.jsx'
 
 const Boxes = [
   {
@@ -23,11 +17,12 @@ const Boxes = [
     disAmount: "$149.99",
     Amount: "$199.99",
     reveiw: '(128 Reviews)',
-    cart: 'Add to Cart',
+    cartMessage: 'Add to Cart',
     svg1: 'M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279L12 18.896l-7.416 3.882 1.48-8.279-6.064-5.828 8.332-1.151z',
     svg3: 'M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279L12 18.896l-7.416 3.882 1.48-8.279-6.064-5.828 8.332-1.151z',
     svg4: 'M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279L12 18.896l-7.416 3.882 1.48-8.279-6.064-5.828 8.332-1.151z',
     svg5: 'M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279L12 18.896l-7.416 3.882 1.48-8.279-6.064-5.828 8.332-1.151z',
+    id: 1
   },
 
   {
@@ -36,11 +31,12 @@ const Boxes = [
     disAmount: "$99.00",
     Amount: "$120.00",
     reveiw: '(250 Reviews)',
-    cart: 'Add to Cart',
+    cartMessage: 'Add to Cart',
     svg1: 'M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279L12 18.896l-7.416 3.882 1.48-8.279-6.064-5.828 8.332-1.151z',
     svg2: 'M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279L12 18.896l-7.416 3.882 1.48-8.279-6.064-5.828 8.332-1.151z',
     svg3: 'M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279L12 18.896l-7.416 3.882 1.48-8.279-6.064-5.828 8.332-1.151z',
     svg5: 'M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279L12 18.896l-7.416 3.882 1.48-8.279-6.064-5.828 8.332-1.151z',
+    id: 2
   },
   {
     heading: 'Mechanical RGB Gaming Keyboard',
@@ -48,12 +44,13 @@ const Boxes = [
     disAmount: '$75.50',
     Amount: "$120.00",
     reveiw: '(80 Reviews)',
-    cart: 'Add to Cart',
+    cartMessage: 'Add to Cart',
     svg1: 'M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279L12 18.896l-7.416 3.882 1.48-8.279-6.064-5.828 8.332-1.151z',
     svg2: 'M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279L12 18.896l-7.416 3.882 1.48-8.279-6.064-5.828 8.332-1.151z',
     svg3: 'M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279L12 18.896l-7.416 3.882 1.48-8.279-6.064-5.828 8.332-1.151z',
     svg4: 'M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279L12 18.896l-7.416 3.882 1.48-8.279-6.064-5.828 8.332-1.151z',
     svg5: 'M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279L12 18.896l-7.416 3.882 1.48-8.279-6.064-5.828 8.332-1.151z',
+    id: 3
 
   },
 
@@ -63,12 +60,13 @@ const Boxes = [
     disAmount: "$99.00",
     Amount: "$120.00",
     reveiw: '(150 Reviews)',
-    cart: 'Add to Cart',
+    cartMessage: 'Add to Cart',
     svg1: 'M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279L12 18.896l-7.416 3.882 1.48-8.279-6.064-5.828 8.332-1.151z',
     svg2: 'M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279L12 18.896l-7.416 3.882 1.48-8.279-6.064-5.828 8.332-1.151z',
     svg3: 'M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279L12 18.896l-7.416 3.882 1.48-8.279-6.064-5.828 8.332-1.151z',
     svg4: 'M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279L12 18.896l-7.416 3.882 1.48-8.279-6.064-5.828 8.332-1.151z',
     svg5: 'M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279L12 18.896l-7.416 3.882 1.48-8.279-6.064-5.828 8.332-1.151z',
+    id: 4
   },
 
 
@@ -78,11 +76,13 @@ const Boxes = [
     disAmount: "$98.00",
     Amount: "$100.00",
     reveiw: '(300 Reviews)',
-    cart: 'Add to Cart',
+    cartMessage: 'Add to Cart',
     svg1: 'M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279L12 18.896l-7.416 3.882 1.48-8.279-6.064-5.828 8.332-1.151z',
     svg2: 'M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279L12 18.896l-7.416 3.882 1.48-8.279-6.064-5.828 8.332-1.151z',
     svg3: 'M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279L12 18.896l-7.416 3.882 1.48-8.279-6.064-5.828 8.332-1.151z',
     svg4: 'M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279L12 18.896l-7.416 3.882 1.48-8.279-6.064-5.828 8.332-1.151z',
+    svg5: 'M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279L12 18.896l-7.416 3.882 1.48-8.279-6.064-5.828 8.332-1.151z',
+    id: 5
   },
 
   {
@@ -91,46 +91,85 @@ const Boxes = [
     disAmount: "$99.00",
     Amouny: "$120.00",
     reveiw: '(25 Reviews)',
-    cart: 'Add to Cart',
+    cartMessage: 'Add to Cart',
     svg1: 'M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279L12 18.896l-7.416 3.882 1.48-8.279-6.064-5.828 8.332-1.151z',
     svg2: 'M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279L12 18.896l-7.416 3.882 1.48-8.279-6.064-5.828 8.332-1.151',
     svg3: 'M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279L12 18.896l-7.416 3.882 1.48-8.279-6.064-5.828 8.332-1.151z',
     svg4: 'M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279L12 18.896l-7.416 3.882 1.48-8.279-6.064-5.828 8.332-1.151z',
     svg5: 'M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279L12 18.896l-7.416 3.882 1.48-8.279-6.064-5.828 8.332-1.151z',
+    id: 6
   }
 ]
+function Cart() {
+  
+  const [heading, newHeading] = React.useState([]);
+
+  function getHeading(index) {
+
+    const item = Boxes[index - 1];
+   
+    
+    newHeading(item.heading);
+    
+    
+
+
+  }
+  return (
+    <>
+
+      <Cartlist heading={heading}
+      />
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+        {Boxes.map((box, index) => (
+          <Mainbox
+            key={index}
+            heading={box.heading}
+            paragraph={box.paragraph}
+            discountAmount={box.discountAmount}
+            amount={box.Amount}
+            reviews={box.reviews}
+            cartMessage={box.cartMessage}
+            svg1={box.svg1}
+            svg2={box.svg2}
+            svg3={box.svg3}
+            svg4={box.svg4}
+            svg5={box.svg5}
+            id={box.id}
+            onBtnclick={getHeading}
+          />
+        ))}
+      </div>
+    </>
+  );
+}
+
+
+
+const header = (
+  <header className="text-center mb-12">
+    <HelloHeading />
+  </header>
+);
+
+
+
 
 const footer = <Footer />;
 
 
-const div = (
-  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-    {Boxes.map((product) => (
-      <Mainbox
 
-        heading={product.heading}
-        paragraph={product.paragraph}
-        disAmount={product.disAmount}
-        Amount={product.Amount}
-        reveiw={product.reveiw}
-        cart={product.cart}
-        svg1={product.svg1}
-        svg2={product.svg2}
-        svg3={product.svg3}
-        svg4={product.svg4}
-        svg5={product.svg5}
-      />
-    ))}
-  </div>
-);
+
+
 
 const container = (
   <div className="p-6 space-y-4">
+
     {header}
-    {div}
+    <Cart />
     {footer}
   </div>
 );
-
 const root = createRoot(document.getElementById('root'))
-root.render(container);
+root.render(container)
+
