@@ -5,6 +5,6 @@ function Footer() {
         <p>&copy; 2025 Component Labs. All rights reserved.</p>
       </footer>
     </>
-  )
+  );
 }
- export default Footer;
+export default Footer;
